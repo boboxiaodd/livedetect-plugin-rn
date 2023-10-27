@@ -2,7 +2,6 @@ def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
 buildscript {
-    ext.kotlin_version = '1.5.20'
     repositories {
         jcenter()
         google()
@@ -11,7 +10,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$safeExtGet("kotlinVersion","1.8.10")"
     }
 }
 
