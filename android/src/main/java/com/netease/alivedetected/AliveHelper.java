@@ -108,6 +108,11 @@ public class AliveHelper {
                 event.putString("token", "");
                 sendEvent("onResultChange", event);
             }
+
+            @Override 
+            public void onBackgroundColor(int Color){
+                
+            }
         });
     }
 
