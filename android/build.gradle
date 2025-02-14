@@ -45,7 +45,7 @@ repositories {
 dependencies {
 //    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'com.facebook.react:react-native:+'
-    api 'io.github.yidun:livedetect:3.2.0'
+    api 'io.github.yidun:livedetect:3.2.2.1'
     api 'com.google.code.gson:gson:2.8.9'
     api "com.squareup.okhttp3:okhttp:${safeExtGet("okHttpVersion", '4.9.2')}"
 }
