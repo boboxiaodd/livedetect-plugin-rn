@@ -57,20 +57,18 @@ public class AliveHelper {
             }
 
             @Override
-            public void onStateTipChanged(ActionType actionType, String stateTip ,int code) {
+            public void onStateTipChanged(ActionType actionType, String stateTip) {
                 int currentIndex = Integer.parseInt(actionType.getActionID());
                 if (currentIndex >= 0 && currentIndex <= 4) {
                     Log.d(TAG, "动作类型--------->" + actionType.getActionTip());
                     WritableMap event = Arguments.createMap();
                     event.putString("message", actionType.getActionTip());
                     event.putInt("currentStep", currentIndex);
-                    event.putInt("code",code);
                     sendEvent("onStepChange", event);
                 } else if (currentIndex == 5) {
                     Log.d(TAG, "状态提示--------->" + stateTip);
                     WritableMap event = Arguments.createMap();
                     event.putString("message", stateTip);
-                    event.putInt("code",code);
                     sendEvent("onWarnChange", event);
                 }
             }
