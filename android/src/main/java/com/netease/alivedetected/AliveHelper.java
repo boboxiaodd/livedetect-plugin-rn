@@ -57,7 +57,7 @@ public class AliveHelper {
             }
 
             @Override
-            public void onStateTipChanged(ActionType actionType, String stateTip) {
+            public void onStateTipChanged(ActionType actionType, String stateTip ,int code) {
                 int currentIndex = Integer.parseInt(actionType.getActionID());
                 if (currentIndex >= 0 && currentIndex <= 4) {
                     Log.d(TAG, "动作类型--------->" + actionType.getActionTip());
